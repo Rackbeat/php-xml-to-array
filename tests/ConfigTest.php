@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-class ReaderTest extends TestCase
+class ConfigTest extends TestCase
 {
 	/** @test */
 	public function can_force_attribute_to_be_an_array() {
