@@ -31,8 +31,8 @@ class ConfigTest extends TestCase
 		// Default
 		$reader = new \Rackbeat\XmlReader( [ 'key_search' => 'to', 'key_replace' => 'to_user' ] );
 
-		$this->assertArrayHasKey( 'note', $reader->fromPath( 'examples/object.xml' ) );
-		$this->assertArrayNotHasKey( 'to', $reader->fromPath( 'examples/object.xml' )['note'] ); // replaced
-		$this->assertArrayHasKey( 'to_user', $reader->fromPath( 'examples/object.xml' )['note'] ); // new
+		$this->assertArrayHasKey( 'note', $reader->fromPath( __DIR__ . '/examples/object.xml' ) );
+		$this->assertArrayNotHasKey( 'to', $reader->fromPath( __DIR__ . '/examples/object.xml' )['note'] ); // replaced
+		$this->assertArrayHasKey( 'to_user', $reader->fromPath( __DIR__ . '/examples/object.xml' )['note'] ); // new
 	}
 }
